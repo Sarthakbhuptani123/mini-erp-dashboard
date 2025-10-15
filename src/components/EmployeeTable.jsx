@@ -16,7 +16,7 @@ function EmployeeTable() {
     const updated = employees.filter((_, i) => i !== index);
     setEmployees(updated);
     if (editingEmployee && editingEmployee.index === index) {
-      setEditingEmployee(null); // Stop editing if the employee is deleted
+      setEditingEmployee(null); 
     }
   };
 

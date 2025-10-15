@@ -25,7 +25,6 @@ function EmployeeForm({ employees, setEmployees, editingEmployee, setEditingEmpl
     }
 
     if (editingEmployee) {
-      // Find the employee by index and update
       const updatedEmployees = employees.map((emp, i) => 
         i === editingEmployee.index ? { name, role, department } : emp
       );
