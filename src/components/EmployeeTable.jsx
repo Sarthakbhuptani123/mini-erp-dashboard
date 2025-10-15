@@ -22,12 +22,7 @@ function EmployeeTable() {
 
   return (
     <div className="page-container space-y-8">
-      <EmployeeForm
-        employees={employees}
-        setEmployees={setEmployees}
-        editingEmployee={editingEmployee}
-        setEditingEmployee={setEditingEmployee}
-      />
+      <EmployeeForm employees={employees} setEmployees={setEmployees} editingEmployee={editingEmployee} setEditingEmployee={setEditingEmployee}/>
       
       <div className="table-wrapper">
         <table className="styled-table">
@@ -47,18 +42,8 @@ function EmployeeTable() {
                 <td>{emp.department}</td>
                 <td>
                   <div className="action-buttons">
-                    <button
-                      onClick={() => setEditingEmployee({ ...emp, index })}
-                      className="btn-edit"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => deleteEmployee(index)}
-                      className="btn-delete"
-                    >
-                      Delete
-                    </button>
+                    <button onClick={() => setEditingEmployee({ ...emp, index })} className="btn-edit" >Edit </button>
+                    <button onClick={() => deleteEmployee(index)} className="btn-delete"> Delete </button>
                   </div>
                 </td>
               </tr>
